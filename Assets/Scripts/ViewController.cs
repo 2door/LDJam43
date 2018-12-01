@@ -15,9 +15,9 @@ public class ViewController : MonoBehaviour {
 	void Start () {
 		Screen.SetResolution(700, 1000, false);
 		GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
-		if(playerObjects == null) {
+		if (playerObjects == null) {
 			// Handle missing PO
-		} else if(playerObjects.Length > 1) {
+		} else if (playerObjects.Length > 1) {
 			// Delete all POs except first
 		} else {
 			playerObject = playerObjects[0];
@@ -33,7 +33,7 @@ public class ViewController : MonoBehaviour {
 	private void lerpCameraIfPlayerDescended() {
 		float cameraY = mainCam.transform.position.y;
 		float playerObjectY = playerObject.transform.position.y;
-		if(playerObjectY <= cameraY) {
+		if (playerObjectY <= cameraY) {
 			Vector3 cameraPos = new Vector3(
 				mainCam.transform.position.x,
 				cameraY,

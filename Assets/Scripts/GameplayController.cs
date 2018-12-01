@@ -8,12 +8,23 @@ using UnityEngine;
 
 public class GameplayController : MonoBehaviour {
 
-	// Use this for initialization
+	public static GameplayController gameplayController;
+	public float horizontalSpeedFactor;
+	public float jumpHeight;
+
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
+
+	void Awake() {
+		if (gameplayController == null) {
+			DontDestroyOnLoad(this.gameObject);
+			gameplayController = this;
+		} else if (gameplayController != this) {
+			Destroy(this.gameObject);
+		}
+	}
+
 	void Update () {
 		
 	}
