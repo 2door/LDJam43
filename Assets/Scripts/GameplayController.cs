@@ -1,0 +1,20 @@
+﻿/*
+Controls gameplay changes.
+Stores modifiers for difficulty and stats.
+ */
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameplayController : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}

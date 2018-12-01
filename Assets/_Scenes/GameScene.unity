@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 219441217}
   - component: {fileID: 219441218}
   m_Layer: 0
-  m_Name: EnvironmentController
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*
+Controls camera movement and view changes
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,8 +11,7 @@ public class ViewController : MonoBehaviour {
 
 	private GameObject playerObject;
 	private Camera mainCam;
-	
-	// Use this for initialization
+
 	void Start () {
 		Screen.SetResolution(700, 1000, false);
 		GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
@@ -24,7 +26,6 @@ public class ViewController : MonoBehaviour {
 		mainCam = Camera.main;
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate () {
 		lerpCameraIfPlayerDescended();
 	}
