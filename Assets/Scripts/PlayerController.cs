@@ -11,16 +11,19 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody2D playerRigidBody;
 	private GameplayController gameplayController;
 	private float playerZ;
+	private float previousY;
 	
 	void Start () {
 		mainCam = Camera.main;
 		playerRigidBody = GetComponent<Rigidbody2D>();
 		gameplayController = GameplayController.gameplayController;
 		playerZ = this.transform.position.z;
+		previousY = this.transform.position.y;
 	}
 	
 	void FixedUpdate () {
 		MovePlayer();
+		Jump();
 	}
 	
 	private void MovePlayer() {
@@ -31,6 +34,13 @@ public class PlayerController : MonoBehaviour {
 		float newY = this.transform.position.y;
 		float newZ = playerZ;
 
-		this.transform.position = new Vector3(newX, newY, newZ);
+		this.transform.position = new Vector3(newX,	newY, newZ);
+	}
+
+	private void Jump() {
+		if (this.transform.position.y == previousY && Input.GetAxis("Vertical") > 0) {
+			playerRigidBody.AddForce(new Vector2(0, gameplayController.jumpHeight), ForceMode2D.Impulse);
+		}
+		previousY = this.transform.position.y;
 	}
 }
