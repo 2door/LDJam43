@@ -196,7 +196,7 @@ MonoBehaviour:
   startPlatformLocation: {fileID: 283154021}
   startPlatformPrefab: {fileID: 1933900348722006, guid: 2431fcebefb765345aa7ad66164be530,
     type: 2}
-  playerPrefab: {fileID: 1185202736871980, guid: 2eba6893d2385e044bff2f6e79982ad8,
+  playerPrefab: {fileID: 1504314328111284, guid: 6379d00cf0f7a7843abc62ec3bc251c9,
     type: 2}
   playerSpawnLocation: {fileID: 1499031007}
 --- !u!114 &219441219
